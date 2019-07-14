@@ -1,4 +1,4 @@
-package gogen
+package generigo
 
 // StringInSlice Detect if string in slice of strings.
 func StringInSlice(str string, slice []string) bool {

@@ -1,4 +1,4 @@
-package gogen
+package generigo
 
 import (
 	"testing"
