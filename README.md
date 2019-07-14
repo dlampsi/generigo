@@ -1,4 +1,4 @@
-# gogen &nbsp;[![GoDoc](https://godoc.org/github.com/dlampsi/gogen?status.svg)](https://godoc.org/github.com/dlampsi/gogen)
+# gogen &nbsp;[![GoDoc](https://godoc.org/github.com/dlampsi/gogen?status.svg)](https://godoc.org/github.com/dlampsi/gogen) [![Build Status](https://travis-ci.org/dlampsi/gogen.svg?branch=master)](https://travis-ci.org/dlampsi/gogen)
 
 Simple common methods for Go
 
