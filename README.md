@@ -1,11 +1,11 @@
-# gogen &nbsp;[![GoDoc](https://godoc.org/github.com/dlampsi/gogen?status.svg)](https://godoc.org/github.com/dlampsi/gogen) [![Build Status](https://travis-ci.org/dlampsi/gogen.svg?branch=master)](https://travis-ci.org/dlampsi/gogen)
+# generigo &nbsp;[![GoDoc](https://godoc.org/github.com/dlampsi/generigo?status.svg)](https://godoc.org/github.com/dlampsi/generigo) [![Build Status](https://travis-ci.org/dlampsi/generigo.svg?branch=master)](https://travis-ci.org/dlampsi/generigo)
 
 Simple common methods for Go
 
 ## Examples
 
 ```go
-import "github.com/dlampsi/gogen"
+import "github.com/dlampsi/generigo"
 ```
 
 String in slice
@@ -14,7 +14,7 @@ String in slice
 str := "apple"
 slice := []string{"pineapple", "apple", "onion"}
 
-if gogen.StringInSlice(str, slice) {
+if generigo.StringInSlice(str, slice) {
     // Proccess case
 }
 ```
@@ -25,7 +25,7 @@ Compare slices
 slice1 := []string{"one", "two"}
 slice2 := []string{"two", "one"}
 
-if gogen.CompareStringSlices(slice1, slice2) {
+if generigo.CompareStringSlices(slice1, slice2) {
     // Proccess case
 }
 ```
