@@ -1,6 +1,6 @@
 # generigo 
 
-[![GoDoc](https://godoc.org/github.com/dlampsi/generigo?status.svg)](https://godoc.org/github.com/dlampsi/generigo) [![Actions Status](https://github.com/dlampsi/generigo/workflows/push/badge.svg)](https://github.com/dlampsi/generigo/actions)
+[![GoDoc](https://godoc.org/github.com/dlampsi/generigo?status.svg)](https://godoc.org/github.com/dlampsi/generigo) [![Actions Status](https://github.com/dlampsi/generigo/workflows/Go/badge.svg)](https://github.com/dlampsi/generigo/actions)
 
 Simple common methods for Go
 
