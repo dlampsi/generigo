@@ -2,6 +2,8 @@ package generigo
 
 import (
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_StringInSlice(t *testing.T) {
@@ -154,4 +156,14 @@ func Test_AverageFloat64(t *testing.T) {
 
 	f([]float64{1.1, 1.1}, 1.1)
 	f([]float64{2.0, 1.0}, 1.5)
+}
+
+func Test_CopyMap(t *testing.T) {
+	f := func(sourceMap map[string]interface{}) {
+		t.Helper()
+		newMap := CopyMap(sourceMap)
+		require.Equal(t, sourceMap, newMap)
+	}
+
+	f(map[string]interface{}{"one": 1, "two": "three"})
 }

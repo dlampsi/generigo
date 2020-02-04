@@ -87,3 +87,17 @@ func AverageFloat64(xs []float64) float64 {
 	}
 	return total / float64(len(xs))
 }
+
+// Copy map into new map.
+func CopyMap(sourceMap map[string]interface{}) map[string]interface{} {
+	newMap := make(map[string]interface{})
+	for k, v := range sourceMap {
+		vm, ok := v.(map[string]interface{})
+		if ok {
+			newMap[k] = CopyMap(vm)
+		} else {
+			newMap[k] = v
+		}
+	}
+	return newMap
+}
