@@ -101,3 +101,12 @@ func CopyMap(sourceMap map[string]interface{}) map[string]interface{} {
 	}
 	return newMap
 }
+
+// Copy map of string into new map.
+func CopyMapString(sourceMap map[string]string) map[string]string {
+	newMap := make(map[string]string)
+	for k, v := range sourceMap {
+		newMap[k] = v
+	}
+	return newMap
+}
