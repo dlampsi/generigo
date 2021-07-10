@@ -39,6 +39,7 @@ func Test_InterfaceInSlice(t *testing.T) {
 		}
 	}
 
+	f(1, nil, false)
 	f(1, []interface{}{}, false)
 	f(1, []interface{}{2}, false)
 	f(1, []interface{}{"2", "1"}, false)
@@ -89,35 +90,35 @@ func Test_SliceInStringSlices(t *testing.T) {
 
 	f([]string{"one"},
 		[][]string{
-			[]string{"five"},
+			{"five"},
 		},
 		false,
 	)
 	f([]string{"one"},
 		[][]string{
-			[]string{"five", "nine"},
-			[]string{"one"},
+			{"five", "nine"},
+			{"one"},
 		},
 		true,
 	)
 	f([]string{"one", "two"},
 		[][]string{
-			[]string{"five", "nine"},
-			[]string{"one", "two"}},
+			{"five", "nine"},
+			{"one", "two"}},
 		true,
 	)
 	f([]string{"one", "two", "eleven"},
 		[][]string{
-			[]string{"five", "nine"},
-			[]string{"eleven", "two", "one"},
-			[]string{"ten"},
+			{"five", "nine"},
+			{"eleven", "two", "one"},
+			{"ten"},
 		},
 		true,
 	)
 	f([]string{},
 		[][]string{
-			[]string{},
-			[]string{"eleven", "two", "one"},
+			{},
+			{"eleven", "two", "one"},
 		},
 		true,
 	)
