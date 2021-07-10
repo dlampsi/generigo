@@ -56,6 +56,7 @@ func Test_CompareStringSlices(t *testing.T) {
 		}
 	}
 
+	f(nil, nil, true)
 	f([]string{"one", "two"}, []string{"five"}, false)
 	f([]string{"one", "two"}, []string{"one", "two"}, true)
 	f([]string{"one", "two"}, []string{"two", "one"}, true)
@@ -72,6 +73,7 @@ func Test_FullCompareStringSlices(t *testing.T) {
 		}
 	}
 
+	f(nil, nil, true)
 	f([]string{"one", "two"}, []string{"five"}, false)
 	f([]string{"one", "two"}, []string{"one", "two"}, true)
 	f([]string{"one", "two"}, []string{"two", "one"}, false)
