@@ -36,7 +36,7 @@ if generigo.CompareStringSlices(slice1, slice2) {
 
 [build-img]: https://github.com/dlampsi/generigo/workflows/build/badge.svg
 [build-url]: https://github.com/dlampsi/generigo/actions
-[coverage-img]: https://codecov.io/gh/dlampsi/generigo/branch/main/graph/badge.svg
+[coverage-img]: https://codecov.io/gh/dlampsi/generigo/branch/master/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/dlampsi/generigo
 [doc-img]: https://pkg.go.dev/badge/dlampsi/generigo
 [doc-url]: https://pkg.go.dev/github.com/dlampsi/generigo
