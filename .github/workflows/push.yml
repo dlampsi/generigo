@@ -1,21 +1,42 @@
-name: Go
-on: [push]
-jobs:
+name: build
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - README.md
+      - LICENSE
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - README.md
+      - LICENSE
 
-  test:
-    name: Tests
+jobs:
+  build:
+    name: Test
     runs-on: ubuntu-18.04
     steps:
-    - name: Set up Go
-      uses: actions/setup-go@v1
+
+    - name: Setup Go
+      uses: actions/setup-go@v2
       with:
-        go-version: 1.12
-      id: go
+        go-version: 1.16
 
     - name: Check out code
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
 
-    - name: Run tests
-      run:  |
-        export GO111MODULE=on
-        go test -v
+    - name: Download module dependencies
+      env: 
+         GOPROXY: "https://proxy.golang.org"
+      run: go mod download
+
+    - name: Test
+      run: go test -race -v -coverprofile=coverage.out ./...
+
+    - name: Code coverage
+      uses: codecov/codecov-action@v1
+      continue-on-error: true
+      with:
+        token: ${{secrets.CODECOV_TOKEN}}
+        file: ./coverage.out
+        fail_ci_if_error: false

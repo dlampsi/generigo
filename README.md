@@ -1,6 +1,8 @@
 # generigo 
 
-[![GoDoc](https://godoc.org/github.com/dlampsi/generigo?status.svg)](https://godoc.org/github.com/dlampsi/generigo) [![Actions Status](https://github.com/dlampsi/generigo/workflows/Go/badge.svg)](https://github.com/dlampsi/generigo/actions)
+[![build-img]][build-url]
+[![doc-img]][doc-url]
+[![coverage-img]][coverage-url]
 
 Simple common methods for Go
 
@@ -31,3 +33,10 @@ if generigo.CompareStringSlices(slice1, slice2) {
     // Proccess case
 }
 ```
+
+[build-img]: https://github.com/dlampsi/generigo/workflows/build/badge.svg
+[build-url]: https://github.com/dlampsi/generigo/actions
+[coverage-img]: https://codecov.io/gh/dlampsi/generigo/branch/main/graph/badge.svg
+[coverage-url]: https://codecov.io/gh/dlampsi/generigo
+[doc-img]: https://pkg.go.dev/badge/dlampsi/generigo
+[doc-url]: https://pkg.go.dev/github.com/dlampsi/generigo
